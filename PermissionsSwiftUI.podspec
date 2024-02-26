@@ -15,6 +15,6 @@ PermissionsSwiftUI can display either a modal or alert popover to show an intera
   s.ios.deployment_target = '11.0'
   s.source_files = 'Sources/**/*.swift', 'Sources/**/**/*.swift', 'Sources/**/**/**/*.swift'
  
-  s.dependency 'Introspect'
+  s.dependency 'SwiftUIIntrospect', '~> 1.0'
   s.dependency 'PermissionsSwiftUI/CorePermissionsSwiftUI'
 end

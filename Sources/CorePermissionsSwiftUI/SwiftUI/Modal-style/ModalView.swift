@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIIntrospect
 
 @available(iOS 13.0, tvOS 13.0, *)
 struct ModalView: View {
@@ -39,11 +40,11 @@ struct ModalView: View {
         }
         .background(Color(.secondarySystemBackground))
         .edgesIgnoringSafeArea(.all)
-        .introspectViewController{
+        .introspect(.viewController, on: .iOS(.v13, .v14, .v15, .v16, .v17)) { viewControler in
             if store.configStore.restrictDismissal ||
                 store.restrictAlertDismissal ||
                 store.restrictModalDismissal {
-                $0.isModalInPresentation = true
+                viewControler.isModalInPresentation = true
             }
         }
     }

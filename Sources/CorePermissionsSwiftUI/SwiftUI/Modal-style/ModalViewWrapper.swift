@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Introspect
 
 @available(iOS 13.0, tvOS 13.0, *)
 @usableFromInline struct ModalViewWrapper<Body: View>: View, CustomizableView {
